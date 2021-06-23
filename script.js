@@ -65,23 +65,27 @@ function fillCalendar(month, year) {
     selectYear.value = year;
     selectMonth.value = month;
     let date = 1;
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 6; i++) {
         //filling each row
-        for (let j = 0; j < 6; j++) {
+        for (let j = 0; j < 7; j++) {
             if (i === 0 && j < firstDay) {
+                cell[(i*7+j)].innerHTML="-";
             }
             else if (date > daysInMonth(month, year)) {
-                break;
+                cell[(i*7+j)].innerHTML="-";
             }
             else {
-                cell[(i*7+j+1)].innerHTML=date;
+                cell[(i*7+j)].innerHTML=date;
                 if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                    cell[(i*7+j)].style.backgroundColor = "blue";
+                    cell[(i*7+j)].style.border = "2px solid blue";
+                }
+                else{
+                    cell[(i*7+j)].style.border = "";
                 }
                 date++;
             }
             console.log(date);
-            console.log(cell[(i*7+j+1)].innerHTML);
+            console.log(cell[(i*7+j)].innerHTML);
         }
     }
 

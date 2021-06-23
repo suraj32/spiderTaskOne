@@ -1,0 +1,34 @@
+h1{
+    text-align: center;
+    background-color: blueviolet;
+}
+#time {
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid rgb(79, 78, 80);
+    background-color: rgb(250, 247, 243);
+    border-radius: 10px;
+    text-align: center;
+    float: right;
+    margin: 10px;
+}
+th,tr{
+    border:2px solid black;
+    background-color: rgb(231, 195, 195);
+    text-align: center;
+    width: 70px;
+    height: 50px;
+}
+footer{
+    text-align: center;
+}
+td{
+    transition: 0.5s;
+}
+td:hover,button:hover{
+    background-color: rgb(48, 44, 44);
+    color:white;
+}
+#monthAndYear{
+    background-color: thistle;
+}

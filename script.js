@@ -114,25 +114,28 @@ function addATask() {
     currentMonth = currentMonth !== presentMonth ? currentMonth : presentMonth + 1;
     dateForTask = dateForTask > 9 ? dateForTask : "0" + dateForTask;
     currentMonth = currentMonth > 9 ? currentMonth : "0" + currentMonth;
-    toDoList.innerHTML += "<br>" + dateForTask + "/" + currentMonth + "/" + presentYear + " => " + document.getElementById("task").value;
-    if (todo === Infinity) {
-        todo = toDoList.innerHTML;
-    } else {
-        todo = toDoList.innerHTML;
-    }
+    toDoList.innerHTML = "<br>" + dateForTask + "/" + currentMonth + "/" + presentYear + " => " + document.getElementById("task").value;
+    store();
     //console.log(todo);
     //console.log(toDoList);
-    localStorage.setItem("todolist", todo);
     //console.log(document.getElementById("task").value);
     //console.log(dateForTask);
     //console.log(currentMonth);
     //console.log(presentYear);
 }
-//todo = localStorage.getItem("todolist");
-//if (todo === Infinity) {
-//    todo += toDoList.innerHTML;
-//} else {
-//    todo += toDoList.innerHTML;
-//}
-//localStorage.setItem("todolist", todo);
-
+todo = localStorage.getItem("tasklist");
+store();
+function store() {
+    if (todo === Infinity) {
+        todo = toDoList.innerHTML;
+    } else {
+        todo += toDoList.innerHTML;
+    }
+    localStorage.setItem("tasklist", todo);
+    toDoList.innerHTML = todo;
+}
+function erase(){
+    todo = "";
+    localStorage.setItem("tasklist",todo);
+    toDoList.innerHTML="";
+}

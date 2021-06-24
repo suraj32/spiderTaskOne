@@ -123,19 +123,21 @@ function addATask() {
     //console.log(currentMonth);
     //console.log(presentYear);
 }
-todo = localStorage.getItem("tasklist");
+todo = localStorage.getItem("TaskList");
 store();
 function store() {
-    if (todo === Infinity) {
+    if (todo === null) {
+        erase();
+        console.log("erased");
         todo = toDoList.innerHTML;
     } else {
         todo += toDoList.innerHTML;
     }
-    localStorage.setItem("tasklist", todo);
+    localStorage.setItem("TaskList", todo);
     toDoList.innerHTML = todo;
 }
 function erase(){
     todo = "";
-    localStorage.setItem("tasklist",todo);
+    localStorage.setItem("TaskList",todo);
     toDoList.innerHTML="";
 }

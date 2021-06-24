@@ -1,9 +1,15 @@
+html{
+    background-image: radial-gradient(rgb(84, 84, 233),rgb(51, 45, 45));
+    margin: auto;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
 h1{
     text-align: center;
     background-color: blueviolet;
+    font-family: cursive;
 }
-#time {
-    font-size: 40px;
+#time{
+    font-size: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: 1px solid rgb(79, 78, 80);
     background-color: rgb(250, 247, 243);
@@ -16,8 +22,8 @@ th,tr{
     border:2px solid black;
     background-color: rgb(231, 195, 195);
     text-align: center;
-    width: 70px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 footer{
     text-align: center;
@@ -29,6 +35,14 @@ td:hover,button:hover{
     background-color: rgb(48, 44, 44);
     color:white;
 }
+#title{
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(224, 188, 26);
+    color: cornsilk;
+}
 #monthAndYear{
-    background-color: thistle;
+    background-color: rgb(56, 223, 214);
+}
+#toDoList{
+    color: beige;
 }

@@ -1,120 +1,131 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <title>
-            SpiderTaskOne
-        </title>
-        <link href="style.css" rel="stylesheet">
-        <link rel="icon" href="Untitled.png" type="image/icon type">
-    </head>
-    <body>
-    <h1><marquee><u>🗓️Schedule Planning Website</u></marquee></h1>
-        <div id="time">🕰️00:00:00</div> <br>
-        <button id="previous" onclick="previous()">⏮️previous</button>
-        <button id="next" onclick="next()">⏭️next</button><br>
-        <table>
-            <tr>
-                <th rowspan="1" colspan="7" scope="rowgroup">CALENDER</th>
-            </tr>
-            <tr>
-                <th rowspan="1" colspan="7" scope="rowgroup" id="monthAndYear">MonthAndYear</th>
-            </tr>
-            <tr>
-                <th>Sun</th>
-                <th>Mon</th>
-                <th>Tue</th>
-                <th>Wed</th>
-                <th>Thu</th>
-                <th>Fri</th>
-                <th>Sat</th>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-        <form>
-            <label for="month">Turn to: </label>
-            <select name="month" id="month" onchange="jump()">
-                    <option value=0>Jan</option>
-                    <option value=1>Feb</option>
-                    <option value=2>Mar</option>
-                    <option value=3>Apr</option>
-                    <option value=4>May</option>
-                    <option value=5>Jun</option>
-                    <option value=6>Jul</option>
-                    <option value=7>Aug</option>
-                    <option value=8>Sep</option>
-                    <option value=9>Oct</option>
-                    <option value=10>Nov</option>
-                    <option value=11>Dec</option>
-            </select>
-            <label for="year"></label>
-            <select name="year" id="year" onchange="jump()">
-                <option value=2021>2021</option>
-                <option value=2022>2022</option>
-                <option value=2023>2023</option>
-                <option value=2024>2024</option>
-                <option value=2025>2025</option>
-                <option value=2026>2026</option>
-                <option value=2027>2027</option>
-                <option value=2028>2028</option>
-                <option value=2029>2029</option>
-                <option value=2030>2030</option>
-            </select>
-        </form>
-        <footer>🕸️Suraj's website🕸️</footer>
-        <script src="script.js"></script>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        SpiderTaskOne
+    </title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="Untitled.png" type="image/icon type">
+</head>
+
+<body>
+    <h1>
+        <marquee><u>🗓️Schedule Planning Website</u></marquee>
+    </h1>
+    <div id="time">🕰️00:00:00</div> <br>
+    <button id="previous" onclick="previous()">⏮️previous</button>
+    <button id="next" onclick="next()">⏭️next</button><br>
+    <table>
+        <tr>
+            <th rowspan="1" colspan="7" scope="rowgroup" id="title">CALENDER</th>
+        </tr>
+        <tr>
+            <th rowspan="1" colspan="7" scope="rowgroup" id="monthAndYear">MonthAndYear</th>
+        </tr>
+        <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+        <tr>
+            <td onclick="showForm(0)"></td>
+            <td onclick="showForm(1)"></td>
+            <td onclick="showForm(2)"></td>
+            <td onclick="showForm(3)"></td>
+            <td onclick="showForm(4)"></td>
+            <td onclick="showForm(5)"></td>
+            <td onclick="showForm(6)"></td>
+        </tr>
+        <tr>
+            <td onclick="showForm(7)"></td>
+            <td onclick="showForm(8)"></td>
+            <td onclick="showForm(9)"></td>
+            <td onclick="showForm(10)"></td>
+            <td onclick="showForm(11)"></td>
+            <td onclick="showForm(12)"></td>
+            <td onclick="showForm(13)"></td>
+        </tr>
+        <tr>
+            <td onclick="showForm(14)"></td>
+            <td onclick="showForm(15)"></td>
+            <td onclick="showForm(16)"></td>
+            <td onclick="showForm(17)"></td>
+            <td onclick="showForm(18)"></td>
+            <td onclick="showForm(19)"></td>
+            <td onclick="showForm(20)"></td>
+        </tr>
+        <tr>
+            <td onclick="showForm(21)"></td>
+            <td onclick="showForm(22)"></td>
+            <td onclick="showForm(23)"></td>
+            <td onclick="showForm(24)"></td>
+            <td onclick="showForm(25)"></td>
+            <td onclick="showForm(26)"></td>
+            <td onclick="showForm(27)"></td>
+        </tr>
+        <tr>
+            <td onclick="showForm(28)"></td>
+            <td onclick="showForm(29)"></td>
+            <td onclick="showForm(30)"></td>
+            <td onclick="showForm(31)"></td>
+            <td onclick="showForm(32)"></td>
+            <td onclick="showForm(33)"></td>
+            <td onclick="showForm(34)"></td>
+        </tr>
+        <tr>
+            <td onclick="showForm(35)"></td>
+            <td onclick="showForm(36)"></td>
+            <td onclick="showForm(37)"></td>
+            <td onclick="showForm(38)"></td>
+            <td onclick="showForm(39)"></td>
+            <td onclick="showForm(40)"></td>
+            <td onclick="showForm(41)"></td>
+        </tr>
+    </table>
+    <form>
+        <label for="month">Turn to: </label>
+        <select name="month" id="month" onchange="turn()">
+            <option value=0>Jan</option>
+            <option value=1>Feb</option>
+            <option value=2>Mar</option>
+            <option value=3>Apr</option>
+            <option value=4>May</option>
+            <option value=5>Jun</option>
+            <option value=6>Jul</option>
+            <option value=7>Aug</option>
+            <option value=8>Sep</option>
+            <option value=9>Oct</option>
+            <option value=10>Nov</option>
+            <option value=11>Dec</option>
+        </select>
+        <label for="year"></label>
+        <select name="year" id="year" onchange="jump()">
+            <option value=2021>2021</option>
+            <option value=2022>2022</option>
+            <option value=2023>2023</option>
+            <option value=2024>2024</option>
+            <option value=2025>2025</option>
+            <option value=2026>2026</option>
+            <option value=2027>2027</option>
+            <option value=2028>2028</option>
+            <option value=2029>2029</option>
+            <option value=2030>2030</option>
+        </select>
+    </form>
+    <div id="form">
+        <input id="task" placeholder="Add a task..">
+        <button onclick="addATask()">Add</button>
+    </div>
+    <h3><u>To-do List</u></h3>
+    <p id="toDoList"></p>
+    <footer>🕸️Suraj's website🕸️</footer>
+    <script src="script.js"></script>
+</body>
+
 </html>

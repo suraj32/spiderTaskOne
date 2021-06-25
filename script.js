@@ -98,15 +98,17 @@ x = -1;
 function showForm(cellno) {
     document.getElementById("task").value = "";
     if (x < 0) {
+        prevBorder = cell[cellno].style.border;
         cell[cellno].style.border = "2px solid black";
         x = cellno;
     }
     else if (x !== cellno) {
-        cell[x].style.border = null;
-        //console.log(cell[cellno].style.border);
+        cell[x].style.border = prevBorder;
+        //console.log(prevBorder);
+        prevBorder = cell[cellno].style.border;
         cell[cellno].style.border = "2px solid black";
-        x = cellno;
         //console.log(x);
+        x = cellno;
     }
     dateForTask = cell[cellno].innerHTML;
     if (dateForTask !== "-") {

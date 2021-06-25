@@ -84,8 +84,8 @@ function fillCalendar(month, year) {
                 }
                 date++;
             }
-            console.log(date);
-            console.log(cell[(i * 7 + j)].innerHTML);
+            //console.log(date);
+            //console.log(cell[(i * 7 + j)].innerHTML);
         }
     }
 }
@@ -94,8 +94,20 @@ form = document.getElementById("form");
 toDoList = document.getElementById("toDoList");
 //console.log(toDoList.innerHTML);
 form.style.display = "none";
+x = -1;
 function showForm(cellno) {
     document.getElementById("task").value = "";
+    if (x < 0) {
+        cell[cellno].style.border = "2px solid black";
+        x = cellno;
+    }
+    else if (x !== cellno) {
+        cell[x].style.border = null;
+        //console.log(cell[cellno].style.border);
+        cell[cellno].style.border = "2px solid black";
+        x = cellno;
+        //console.log(x);
+    }
     dateForTask = cell[cellno].innerHTML;
     if (dateForTask !== "-") {
         form.style.display = "block";
@@ -136,8 +148,8 @@ function store() {
     localStorage.setItem("TaskList", todo);
     toDoList.innerHTML = todo;
 }
-function erase(){
+function erase() {
     todo = "";
-    localStorage.setItem("TaskList",todo);
-    toDoList.innerHTML="";
+    localStorage.setItem("TaskList", todo);
+    toDoList.innerHTML = "";
 }
